@@ -1,6 +1,6 @@
 ---
 name: straznik-glosu-marki
-description: "Bramka głosu marki: konfiguracja krok po kroku, profil głosu z tekstów marki (glos.md) i sprawdzenie gotowego tekstu punkt po punkcie z cytatem jako dowodem. Use when: 'sprawdź ten tekst', 'czy to brzmi jak my', 'czy to nie brzmi jak AI', 'wyprowadź głos marki', 'skonfiguruj strażnika'. Nie pisze i nie poprawia."
+description: "Bramka głosu marki: konfiguracja krok po kroku, profil głosu z tekstów marki (glos.md), sprawdzenie dowolnego tekstu punkt po punkcie z cytatem jako dowodem, wyjaśnianie 20 wzorców slopu po polsku. Use when: 'sprawdź ten tekst', 'czy to brzmi jak my', 'czy to nie brzmi jak AI', 'po czym poznać tekst z AI', 'wyprowadź głos marki', 'skonfiguruj strażnika'."
 compatibility: Claude Code i Codex. Walidacja w Claude Code uruchamia się jako osobny agent (narzędzie Agent), w Codex w świeżym wątku.
 ---
 
@@ -27,6 +27,7 @@ Gdy folderu nie ma, uruchom Konfigurację zamiast pytać ad hoc. Gdy jest kilka 
 - Użytkownik wywołuje skill bez tekstu (`/straznik-glosu-marki`), mówi "zacznijmy", "skonfiguruj", "poprowadź mnie", albo nie ma folderu marki → **Konfiguracja** (`references/konfiguracja.md`): sześć kroków, jedno pytanie naraz, stan w `glos-marki/config.md`. Gdy `config.md` istnieje z niedokończonym krokiem, kontynuuj od niego zamiast zaczynać od zera.
 - Użytkownik prosi o profil, głos, "z czego pisze nasza firma", albo nie ma `glos.md` → **Ekstrakcja**.
 - Jest `glos.md` i użytkownik daje tekst do sprawdzenia → **Walidacja**.
+- Użytkownik pyta o oznaki AI, slop, konkretny wzorzec ("co to kontrast binarny", "po czym poznać tekst z AI", "pokaż listę") → **Wyjaśnij**: odpowiedz z `references/wzorce-slopu-pl.md` po ludzku, z jednym przykładem po polsku na wzorzec, bez żargonu. Na pytanie ogólne pokaż wszystkie 20 w tabeli (numer, nazwa, przykład, co jest nie tak) i powiedz, że dwa z nich (1 i 18) skill sprawdza względem marki, bo bywają jej cechą. Na pytanie o jeden wzorzec: definicja, dwa przykłady, jak wygląda w raporcie. Nie oceniaj tu żadnego tekstu; jeśli użytkownik przy okazji wkleja tekst, zaproponuj Walidację.
 - Użytkownik daje tekst, a `glos.md` nie ma → powiedz, że bez profilu walidacja sprawdzi tylko punkty niezależne od marki (1, 2, 5, 6, 7b, 8), i zaproponuj najpierw ekstrakcję.
 
 ## Ekstrakcja
