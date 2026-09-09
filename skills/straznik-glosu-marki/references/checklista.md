@@ -1,5 +1,7 @@
 # Checklista walidatora - 8 punktów
 
+Działa na każdym tekście komunikacji marki: post, sekcja strony, FAQ, newsletter, oferta, mail do klienta, odpowiedź na komentarz, opis produktu. Na początku raportu nazwij typ tekstu jednym słowem. Punkty 1, 5 i 8 czytaj w kontekście typu: odpowiedź w FAQ zaczyna się od odpowiedzi, nie od hooka; sekcja "o nas" nie musi mieć wezwania; test tygodnia w opisie produktu to "czy zapamiętam jedną cechę", nie "czy zapamiętam zdanie".
+
 Każdy punkt to PASS albo NIE. Werdykt: 0 NIE = do publikacji, 1-2 NIE = do poprawek, 3+ NIE = do przepisania od nowa. Bez dosłownego cytatu nie ma PASS. Przy punktach porównujących tekst z profilem (3, 4, 7a) - dwa cytaty: z tekstu i z profilu.
 
 ## 1. Pierwsze zdanie zatrzymuje

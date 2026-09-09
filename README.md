@@ -18,7 +18,7 @@ Alternatywa dla jednego skilla bez agenta: `npx skills add Szewowsky/skille-mark
 
 | Skill | Co robi | Stan |
 |---|---|---|
-| `straznik-glosu-marki` | Wyprowadza profil głosu marki z jej tekstów i sprawdza gotowy tekst punkt po punkcie, z cytatami jako dowodem. Bramka, nie pisarz. | w budowie |
+| `straznik-glosu-marki` | Wyprowadza profil głosu marki z jej tekstów (posty, strona, newslettery) i sprawdza dowolny tekst komunikacji punkt po punkcie, z cytatami jako dowodem. Bramka, nie pisarz. | gotowy |
 | `poranny-radar` | Poranny brief marketera z danych newslettera i pamięcią wniosków. | planowany |
 | `grupy-fb` | Monitoring grup Facebook pod kątem tematu, z anonimizacją autorów. | planowany |
 | `audyt-strony` | Wrapper na audyt strony (Impeccable) z instrukcją. | planowany |
