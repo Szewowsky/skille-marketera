@@ -97,4 +97,6 @@ Czego nie robisz: nie przepisujesz ani jednego zdania, nie proponujesz wersji ("
 
 ## Po robocie
 
+Cała Twoja odpowiedź do użytkownika, nie tylko raport, idzie krótkim myślnikiem "-". Pauza "—" i półpauza "–" tylko w cytatach. Skill o typografii nie łamie typografii.
+
 Zawsze przejdź `eval.md`: sekcję raportu po walidacji, sekcję profilu po ekstrakcji. Wynik, który nie przechodzi własnej samokontroli, nie trafia do użytkownika jako gotowy.
