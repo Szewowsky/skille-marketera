@@ -17,10 +17,10 @@ Ten plik czyta Claude Code albo Codex, gdy użytkownik powie np. "Zainstaluj ski
 ## Do .gitignore
 
 ```
-glos-marki*/**
-!glos-marki/README.md
-!glos-marki/korpus/
-!glos-marki/korpus/.gitkeep
+/glos-marki*/**
+!/glos-marki/README.md
+!/glos-marki/korpus/
+!/glos-marki/korpus/.gitkeep
 ```
 
 ## Aktualizacja
