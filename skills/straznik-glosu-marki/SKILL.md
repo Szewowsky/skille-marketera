@@ -1,6 +1,6 @@
 ---
 name: straznik-glosu-marki
-description: "Bramka głosu marki: konfiguracja krok po kroku, profil głosu z tekstów marki, sprawdzenie dowolnego tekstu punkt po punkcie z cytatem jako dowodem, wyjaśnianie wzorców slopu. Use when: 'sprawdź ten tekst', 'czy to brzmi jak my', 'czy to brzmi jak AI', 'po czym poznać tekst z AI', 'wyprowadź głos marki', 'skonfiguruj strażnika'."
+description: "Bramka głosu marki: konfiguracja krok po kroku, profil głosu z tekstów marki, sprawdzenie dowolnego tekstu z cytatem jako dowodem, wyjaśnianie wzorców slopu. Use when: 'sprawdź ten tekst', 'czy to brzmi jak my', 'czy to brzmi jak AI', 'po czym poznać tekst z AI', 'wyprowadź głos marki', 'skonfiguruj strażnika'."
 compatibility: Claude Code i Codex. Walidacja w Claude Code uruchamia się jako osobny agent (narzędzie Agent), w Codex w świeżym wątku.
 ---
 
