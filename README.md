@@ -2,19 +2,17 @@
 
 Skille dla Claude Code i Codex z webinaru "5 skilli Claude Code dla marketera" (AI_Marketers 3). Każdy skill to folder `skills/<nazwa>/` z plikiem `SKILL.md`. Działają w Claude Code i w Codex - ten sam tekst instrukcji, różny mechanizm uruchomienia (opis w sekcji "Claude Code vs Codex").
 
-## Instalacja jedną linią
+## Instalacja: jedno zdanie do agenta
+
+Otwórz Claude Code albo Codex w swoim projekcie i powiedz:
 
 ```
-npx skills add Szewowsky/skille-marketera --skill straznik-glosu-marki
+Zainstaluj skille z https://github.com/Szewowsky/skille-marketera
 ```
 
-Bez flag `npx skills` zapyta, czy instalować do projektu czy globalnie. Dla wszystkich skilli naraz:
+Agent czyta `INSTALACJA.md` z tego repo i kopiuje do Twojego projektu: skille do `.claude/skills/`, sub-agenta walidatora do `.claude/agents/`, szablon folderu `glos-marki/` i wpisy do `.gitignore`. Nic globalnego, nic poza tym repo. Potem: teksty marki do `glos-marki/korpus/`, "Wyprowadź głos marki", "Sprawdź ten tekst".
 
-```
-npx skills add Szewowsky/skille-marketera --all
-```
-
-Albo powiedz agentowi: "Zainstaluj skill straznik-glosu-marki z https://github.com/Szewowsky/skille-marketera".
+Alternatywa dla jednego skilla bez agenta: `npx skills add Szewowsky/skille-marketera --skill straznik-glosu-marki` (walidator uruchomi się wtedy jako zwykły sub-agent, bez ograniczenia narzędzi).
 
 ## Skille
 

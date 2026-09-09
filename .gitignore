@@ -8,11 +8,12 @@ seen.json
 *.csv
 *.xlsx
 brand-context*
-glos-marki-*/
+glos-marki*/**
+!glos-marki/README.md
+!glos-marki/korpus/
+!glos-marki/korpus/.gitkeep
 **/glos.md
 !skills/**/examples/glos-przykladowy.md
-korpus/
-**/korpus/
 scenariusz*
 notatki-prelegenta*
 

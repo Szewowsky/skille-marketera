@@ -1,6 +1,6 @@
 # skille-marketera
 
-Publiczne repo ze skillami dla marketera. Jeden skill = jeden folder `skills/<nazwa>/` z `SKILL.md`, opcjonalnie `eval.md`, `references/`, `examples/`.
+Publiczne repo ze skillami dla marketera. Instalacja = użytkownik mówi agentowi "zainstaluj skille z tego repo", agent wykonuje `INSTALACJA.md` (kopiuje `skills/<nazwa>/` do `.claude/skills/`, `agents/*.md` do `.claude/agents/`, szablon `glos-marki/`). Jeden skill = jeden folder z `SKILL.md`, opcjonalnie `eval.md`, `references/`, `examples/`.
 
 ## Zasady
 
