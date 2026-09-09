@@ -30,7 +30,7 @@ NIE, gdy w tekście jest choć jedno słowo z listy zakazanych.
 
 Czytelnik ma zrobić jedną rzecz wobec marki. Wezwanie to prośba o działanie skierowane do marki albo o rozpowszechnienie: napisz, kliknij, kup, udostępnij, skomentuj, zapisz się. Porada użytkowa ("podlewaj raz w tygodniu", "otwórz okno na noc") to treść tekstu, nie wezwanie.
 
-NIE, gdy na końcu jest więcej niż jedno wezwanie, np. pytanie, prośba o udostępnienie i link naraz.
+NIE tylko wtedy, gdy wezwań jest więcej niż jedno, np. pytanie, prośba o udostępnienie i link naraz. Brak wezwania to PASS: wiele marek kończy zdaniem-werdyktem, nie prośbą, i to jest ich cecha.
 
 ## 6. Długość
 
