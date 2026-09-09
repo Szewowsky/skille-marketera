@@ -47,7 +47,7 @@ Ekstrakcja idzie w głównym wątku: rozmowa o profilu jest częścią pracy.
 
 Walidator ma nie widzieć, jak tekst powstawał, i nie da się go przekonać. Dlatego uruchamiasz go w izolacji:
 
-- **Claude Code:** narzędzie Agent z typem `walidator` (plik `.claude/agents/walidator.md`, instalowany razem ze skillem; ma tylko narzędzia do czytania, więc fizycznie nie może niczego przepisać). Jeśli tego pliku nie ma w projekcie, nowy sub-agent ogólny z modelem takim jak bieżący. W obu przypadkach do promptu wklejasz w całości: tekst do oceny, treść `glos.md`, treść `references/checklista.md` i `references/wzorce-slopu-pl.md`, oraz sekcję "Instrukcja walidatora" poniżej. Nic więcej - żadnej historii rozmowy, żadnych wskazówek, "na co zwrócić uwagę".
+- **Claude Code:** narzędzie Agent z typem `walidator` (plik `.claude/agents/walidator.md`, instalowany razem ze skillem; ma tylko narzędzia do czytania, więc fizycznie nie może niczego przepisać). Jeśli typu `walidator` nie ma na liście, użyj sub-agenta ogólnego z modelem takim jak bieżący i powiedz użytkownikowi jednym zdaniem, że walidator poszedł bez blokady zapisu (instalacja z INSTALACJA.md ją dodaje). W obu przypadkach do promptu wklejasz w całości: tekst do oceny, treść `glos.md`, treść `references/checklista.md` i `references/wzorce-slopu-pl.md`, oraz sekcję "Instrukcja walidatora" poniżej. Nic więcej - żadnej historii rozmowy, żadnych wskazówek, "na co zwrócić uwagę".
 - **Codex:** to samo w nowym wątku. Jeśli nowy wątek nie jest możliwy, uruchom walidację w bieżącym, ale napisz użytkownikowi, że izolacja nie zadziałała.
 
 Wynik sub-agenta pokaż użytkownikowi w całości, bez skracania i bez własnego komentarza o tym, czy się zgadzasz. Potem przejdź `eval.md` na tym raporcie. Gdy któryś check pada, uruchom walidator jeszcze raz z dopiskiem, który check padł. Maksymalnie dwa powtórzenia.
@@ -78,6 +78,8 @@ PUNKT 7b - PASS albo NIE
 | 2 | Odchrząknięcie na start | jest | "Powiem wprost." |
 | ... wszystkie 20 ... |
 ```
+
+Zanim napiszesz podsumowanie, policz linie PUNKT: ma ich być dziewięć (1, 2, 3, 4, 5, 6, 7a, 7b, 8). Brak którejkolwiek = raport niekompletny, dopisz ją. W podsumowaniu 7a i 7b liczą się jako jeden punkt 7 (NIE, gdy którykolwiek jest NIE).
 
 Na koniec trzy linijki:
 

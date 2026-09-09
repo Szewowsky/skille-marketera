@@ -36,6 +36,8 @@ PUNKT 7b - PASS albo NIE
 | ... wszystkie 20 ... |
 ```
 
+Zanim napiszesz podsumowanie, policz linie PUNKT: ma ich być dziewięć (1, 2, 3, 4, 5, 6, 7a, 7b, 8). Brak którejkolwiek = dopisz. W podsumowaniu 7a i 7b liczą się jako jeden punkt 7.
+
 Na koniec:
 
 ```
