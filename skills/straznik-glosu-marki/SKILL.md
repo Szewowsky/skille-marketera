@@ -1,6 +1,6 @@
 ---
 name: straznik-glosu-marki
-description: "Bramka głosu marki: wyprowadza profil głosu z tekstów marki (glos.md) i sprawdza gotowy tekst punkt po punkcie, z dosłownym cytatem jako dowodem. Use when: 'sprawdź ten tekst', 'czy to brzmi jak my', 'czy to nie brzmi jak AI', 'wyprowadź głos marki z naszych postów'. Nie pisze i nie poprawia."
+description: "Bramka głosu marki: konfiguracja krok po kroku, profil głosu z tekstów marki (glos.md) i sprawdzenie gotowego tekstu punkt po punkcie z cytatem jako dowodem. Use when: 'sprawdź ten tekst', 'czy to brzmi jak my', 'czy to nie brzmi jak AI', 'wyprowadź głos marki', 'skonfiguruj strażnika'. Nie pisze i nie poprawia."
 compatibility: Claude Code i Codex. Walidacja w Claude Code uruchamia się jako osobny agent (narzędzie Agent), w Codex w świeżym wątku.
 ---
 
@@ -16,13 +16,15 @@ Jeden folder = jedna marka. Konwencja: `glos-marki/` w projekcie użytkownika (a
 glos-marki/
 ├── korpus/     # opublikowane teksty marki, jeden plik = jeden tekst (.md lub .txt)
 ├── brief.md    # opcjonalnie: brief, brand book, słownik "tak mówimy / nie mówimy"
+├── config.md   # stan konfiguracji krok po kroku + ustawienia (próg werdyktu, model)
 └── glos.md     # wynik ekstrakcji, wejście walidacji
 ```
 
-Gdy folderu nie ma, zapytaj, gdzie są teksty marki, i zaproponuj tę strukturę. Gdy jest kilka folderów `glos-marki-*`, zapytaj, o którą markę chodzi. Zero globalnego stanu.
+Gdy folderu nie ma, uruchom Konfigurację zamiast pytać ad hoc. Gdy jest kilka folderów `glos-marki-*`, zapytaj, o którą markę chodzi. Zero globalnego stanu.
 
 ## Która gałąź
 
+- Użytkownik wywołuje skill bez tekstu (`/straznik-glosu-marki`), mówi "zacznijmy", "skonfiguruj", "poprowadź mnie", albo nie ma folderu marki → **Konfiguracja** (`references/konfiguracja.md`): sześć kroków, jedno pytanie naraz, stan w `glos-marki/config.md`. Gdy `config.md` istnieje z niedokończonym krokiem, kontynuuj od niego zamiast zaczynać od zera.
 - Użytkownik prosi o profil, głos, "z czego pisze nasza firma", albo nie ma `glos.md` → **Ekstrakcja**.
 - Jest `glos.md` i użytkownik daje tekst do sprawdzenia → **Walidacja**.
 - Użytkownik daje tekst, a `glos.md` nie ma → powiedz, że bez profilu walidacja sprawdzi tylko punkty niezależne od marki (1, 2, 5, 6, 7b, 8), i zaproponuj najpierw ekstrakcję.
@@ -83,6 +85,8 @@ PASS: X z 8
 NIE: [numery]
 Werdykt: do publikacji (0 NIE) / do poprawek (1-2 NIE) / do przepisania od nowa (3+ NIE)
 ```
+
+Jeśli `config.md` zmienia próg werdyktu, użyj progu z `config.md`.
 
 Czego nie robisz: nie przepisujesz ani jednego zdania, nie proponujesz wersji ("lepiej byłoby"), nie doradzasz, jak pisać, nie oceniasz tematu ani pomysłu, nie zgadujesz, czy tekst pisał człowiek czy AI. Detektory AI zgadują. Nazwany wzorzec z cytatem to dowód, który autor może sprawdzić sam. Twoja rola kończy się na werdykcie.
 
