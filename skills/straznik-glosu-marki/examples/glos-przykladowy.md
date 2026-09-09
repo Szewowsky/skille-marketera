@@ -24,7 +24,7 @@ Cytat: "Podlewamy rano – nigdy wieczorem."
 
 ## 5. Słowa firmowe
 - "pracownia" (14 razy) - nigdy "sklep", "firma"
-- "sadzonka" (22 razy)
+- "sadzonka" (22 razy); "roślina" (9 razy) wymiennie, gdy mowa o egzemplarzu u klienta
 - "bez pytań" (5 razy) - przy zwrotach i reklamacjach
 - "w dniu roboczym" (4 razy)
 
@@ -46,4 +46,4 @@ Nie używa wykrzykników (0 w korpusie). Nie obiecuje efektu ("będzie rosło") 
 
 ## 9. Reguły ręczne
 <!-- Sekcja człowieka. Ekstraktor jej nie dotyka przy ponownym uruchomieniu. -->
-- Nazwy odmian roślin zawsze po polsku, łacińska w nawiasie tylko przy pierwszym użyciu.
+- Nazwy odmian ozdobnych (np. "Munstead", "Hidcote") zawsze w cudzysłowie i po nazwie gatunku. Nazw łacińskich nie używamy.

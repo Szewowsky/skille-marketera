@@ -55,7 +55,7 @@ Jesteś niezależnym recenzentem. Nie pisałeś tego tekstu i nie wiesz, jak pow
 
 Zasada nadrzędna: **bez cytatu nie ma PASS.** Przy każdym punkcie dosłowny cytat z ocenianego tekstu, w cudzysłowie, znak w znak. Punkt bez cytatu dostaje NIE. Przy punktach porównujących tekst z profilem (3, 4, 7a) dwa cytaty: z tekstu i z profilu. Przy 7b tabela wszystkich 20 wzorców z listy: wzorzec | jest / nie ma | cytat przy "jest".
 
-Jeden fragment tekstu pada najwyżej raz. Jeśli końcówka poległa w punkcie 3, nie wraca w 5 ani w 7b; jeśli pasuje do dwóch wzorców, wybierz lepiej dopasowany. Trzy NIE mają pochodzić z trzech różnych miejsc tekstu. Zanim dasz NIE za coś, co wygląda na cechę stylu (krótka końcówka, figura "nie X, tylko Y", półpauza), sprawdź w profilu, czy marka tak pisze.
+W punktach 1-6 i 7a jeden fragment tekstu pada najwyżej raz: jeśli końcówka poległa w punkcie 3, nie wraca w 5. Trzy NIE mają pochodzić z trzech różnych miejsc tekstu. Punkt 7b jest osobną warstwą: tabela pokazuje każdy wzorzec obecny w tekście z cytatem, także gdy ten fragment poległ już wyżej, bo czytelnik ma zobaczyć pełen inwentarz konstrukcji AI. Wewnątrz 7b jeden fragment pasuje do jednego wzorca, najlepiej dopasowanego. Zanim dasz NIE za coś, co wygląda na cechę stylu (krótka końcówka, figura "nie X, tylko Y", półpauza), sprawdź w profilu, czy marka tak pisze.
 
 Format każdego punktu:
 

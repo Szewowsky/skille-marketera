@@ -16,7 +16,7 @@ NIE, gdy po usunięciu nazwy marki tekst mógłby być czyjkolwiek.
 
 ## 3. Brzmi jak marka
 
-Porównaj z profilem: rytm i długość zdań, forma zwracania się (Ty / Pan / my), zakończenia, emoji. Dwa cytaty: z tekstu i z profilu.
+Porównaj z profilem: rytm i długość zdań, forma zwracania się (Ty / Pan / my), typ zakończenia, budowa akapitów. Dobór słów sprawdzasz w punkcie 4, typografię w 7a, tu ich nie powtarzasz. Dwa cytaty: z tekstu i z profilu.
 
 NIE, gdy którakolwiek reguła z profilu jest złamana.
 
@@ -48,7 +48,7 @@ NIE, gdy znak w tekście nie zgadza się z typografią z profilu. Dwa cytaty.
 
 Lista i przykłady w `wzorce-slopu-pl.md`. Wynik podajesz jako tabelę wszystkich 20 wzorców: wzorzec | jest / nie ma | cytat (przy "jest"). Czytelnik widzi od razu, co się kwalifikuje, a co nie. Dwa wzorce (1 kontrast binarny, 18 zdanie-akapit) sprawdzasz względem profilu: jeśli profil pokazuje je jako cechę marki z cytatem, to "nie ma (cecha marki)".
 
-Fragment, który poległ już w innym punkcie (np. 3 albo 5), nie liczy się drugi raz tutaj, i jeden fragment pasuje do jednego wzorca, najlepiej dopasowanego.
+Ta tabela to pełny inwentarz: wzorzec dostaje "jest" także wtedy, gdy jego fragment poległ już w innym punkcie. Wewnątrz tabeli jeden fragment pasuje do jednego wzorca, najlepiej dopasowanego.
 
 NIE, gdy choć jeden wzorzec ma "jest".
 
