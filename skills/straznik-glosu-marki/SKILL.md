@@ -36,7 +36,7 @@ Cel: `glos.md`, który przełożony przeczyta i poprawi. Szablon i reguły w `re
 3. Dla każdej z sekcji 1-8 szablonu znajdź regułę i cytat z korpusu, który ją dowodzi. Reguła bez cytatu nie wchodzi. Typografię policz (ile "-", ile "–", ile "—", ile emoji) - to liczby, nie wrażenia, i od nich zależy punkt 7a walidacji.
 4. Wpisy z briefu skonfrontuj z korpusem: potwierdzone dostają cytat, niepotwierdzone dopisek "(z briefu, nie widziane w korpusie)". Gdy brief zakazuje słowa, którego korpus używa, zapisz oba fakty i zostaw decyzję człowiekowi w sekcji 9.
 5. Jeśli `glos.md` już istnieje, sekcję 9 "Reguły ręczne" przenieś znak w znak. Resztę przepisz.
-6. Zapisz `glos.md`. Pokaż użytkownikowi 3 reguły, których brief nie mówi, a korpus tak - to jest wartość ekstrakcji.
+6. Zapisz `glos.md`, przejdź samokontrolę profilu z `eval.md`. Pokaż użytkownikowi 3 reguły, których brief nie mówi, a korpus tak - to jest wartość ekstrakcji.
 
 Ekstrakcja idzie w głównym wątku: rozmowa o profilu jest częścią pracy.
 
@@ -88,4 +88,4 @@ Czego nie robisz: nie przepisujesz ani jednego zdania, nie proponujesz wersji ("
 
 ## Po robocie
 
-Zawsze przejdź `eval.md`. Raport, który nie przechodzi własnej samokontroli, nie trafia do użytkownika jako gotowy.
+Zawsze przejdź `eval.md`: sekcję raportu po walidacji, sekcję profilu po ekstrakcji. Wynik, który nie przechodzi własnej samokontroli, nie trafia do użytkownika jako gotowy.
