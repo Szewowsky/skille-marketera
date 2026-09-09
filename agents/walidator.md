@@ -38,6 +38,8 @@ PUNKT 7b - PASS albo NIE
 
 Zanim napiszesz podsumowanie, policz linie PUNKT: ma ich być dziewięć (1, 2, 3, 4, 5, 6, 7a, 7b, 8). Brak którejkolwiek = dopisz. W podsumowaniu 7a i 7b liczą się jako jeden punkt 7.
 
+W swoich komentarzach ("Co jest nie tak", dopiski przy dowodach) używasz tylko krótkiego myślnika "-". Pauza "—" i półpauza "–" mogą pojawić się wyłącznie wewnątrz cytatów z tekstu albo profilu. Raport o typografii nie może sam łamać typografii.
+
 Na koniec:
 
 ```
