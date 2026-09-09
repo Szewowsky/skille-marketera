@@ -1,12 +1,12 @@
 # Wzorce slopu po polsku
 
-Konstrukcje, które zdradzają tekst pisany "jak każda firma z AI". Sprawdzane zawsze, bez względu na profil marki - żadna marka nie ma ich jako cechy stylu. Szkielet z no-ai-slop (Peter Yang, MIT), zlokalizowany, nie przetłumaczony.
+Konstrukcje, które zdradzają tekst pisany "jak każda firma z AI". Sprawdzane zawsze, z dwoma wyjątkami względem profilu (wzorce 1 i 18), bo niektóre marki mają je w korpusie jako własną figurę. Szkielet z no-ai-slop (Peter Yang, MIT), zlokalizowany, nie przetłumaczony.
 
-Jak używać: przy punkcie 7b nazwij wzorzec, zacytuj linijkę, w kilku słowach powiedz, co jest nie tak. Bez proponowania wersji.
+Jak używać: przy punkcie 7b przejdź wszystkie 20 w tabeli (wzorzec | jest / nie ma | cytat). Przy "jest" cytat znak w znak. Jeden fragment tekstu pasuje do jednego wzorca, najlepiej dopasowanego. Bez proponowania wersji.
 
 | # | Wzorzec | Jak wygląda po polsku | Co jest nie tak |
 |---|---|---|---|
-| 1 | Kontrast binarny | "To nie jest kurs. To system." / "Nie chodzi o to, żeby X. Chodzi o to, żeby Y." | Najbardziej zużyta figura ostatnich lat; udaje głębię przez zaprzeczenie |
+| 1 | Kontrast binarny | "To nie jest kurs. To system." / "Nie chodzi o to, żeby X. Chodzi o to, żeby Y." | Najbardziej zużyta figura ostatnich lat; udaje głębię przez zaprzeczenie. Względem profilu: jeśli korpus marki używa jej regularnie i profil to dokumentuje, to cecha marki, nie slop |
 | 2 | Odchrząknięcie na start | "Powiem wprost.", "Będę szczery.", "Niewygodna prawda jest taka, że" | Zapowiada szczerość zamiast być szczerym |
 | 3 | Sztuczny insight | "Czego nikt Ci nie powie", "To, co większość pomija", "Sekret, o którym milczą" | Obiecuje wiedzę, której tekst potem nie dostarcza |
 | 4 | Dwukropek-odsłona | "Najlepsze: uczy się sam." / "Wynik: 3x więcej leadów." | Teatralna pauza przed banałem |
@@ -17,7 +17,7 @@ Jak używać: przy punkcie 7b nazwij wzorzec, zacytuj linijkę, w kilku słowach
 | 9 | Udawany mocny czasownik | "stanowi centralny hub", "napędza transformację", "odblokowuje potencjał" | Brzmi konkretnie, nie mówi nic |
 | 10 | Karuzela synonimów | agent / asystent / narzędzie / rozwiązanie w trzech zdaniach o tym samym | Unikanie powtórzenia zamiast precyzji |
 | 11 | Lista zaprzeczeń | "Nie kurs. Nie szkolenie. Nie warsztat. System." | Wariant kontrastu binarnego, w serii |
-| 12 | Dramatyczne rozbicie | "I tyle. To wszystko." / "Koniec. Kropka." | Fragmenty zdań dla efektu |
+| 12 | Dramatyczne rozbicie | "I tyle. To wszystko." / "Koniec. Kropka." / "Serio." | Fragmenty bez własnej treści, które tylko podbijają poprzednie zdanie. Krótkie pełne zdanie z informacją ("Więcej nie trzeba." po instrukcji, "Zwykle wraca.") nie jest rozbiciem |
 | 13 | Pytanie-zastawka | "Co jeśli powiem Ci, że...", "Pomyśl o tym:", "A gdyby tak..." | Retoryka zamiast treści |
 | 14 | Pseudogłęboka puenta | "Przyszłość nie nadchodzi. Już tu jest." / "Pytanie nie brzmi czy, tylko kiedy." | Aforyzm bez pokrycia |
 | 15 | Podsumowanie-powtórka | "Podsumowując", "Ostatecznie", "Na koniec" + akapit, który powtarza tekst | Czytelnik już to przeczytał |

@@ -12,9 +12,12 @@ Profil to czytelny markdown, który przełożony może przeczytać i poprawić. 
 <średnia, rozrzut, czy miesza krótkie z długimi, typowy akapit>
 Cytat: "..."
 
-## 2. Otwarcia
+## 2. Otwarcia i zakończenia
 <jakimi typami pierwszego zdania marka zaczyna: sytuacja, liczba, pytanie, teza, zwrot do czytelnika... - z częstością w korpusie>
-Cytat: "..."
+<jak marka kończy: krótkie zdanie-werdykt, wezwanie "napisz do nas", pytanie, brak zakończenia... - z częstością; to od tej sekcji zależy, czy krótka końcówka w walidacji jest cechą marki, czy śladem AI>
+<figury powtarzalne, które mogłyby wyglądać na AI, a są cechą korpusu: np. "nie X, tylko Y" - z liczbą wystąpień>
+Cytat otwarcia: "..."
+Cytat zakończenia: "..."
 
 ## 3. Forma
 <Ty / Pan / my / bezosobowo; czy marka mówi o sobie "my" czy z nazwy>

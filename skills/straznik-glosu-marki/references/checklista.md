@@ -4,7 +4,7 @@ Każdy punkt to PASS albo NIE. Werdykt: 0 NIE = do publikacji, 1-2 NIE = do popr
 
 ## 1. Pierwsze zdanie zatrzymuje
 
-Po samym pierwszym zdaniu chce się czytać drugie. Nazwij typ otwarcia i porównaj z typami otwarć z profilu (sekcja "Otwarcia").
+Po samym pierwszym zdaniu chce się czytać drugie. Nazwij typ otwarcia i porównaj z typami z profilu (sekcja "Otwarcia i zakończenia").
 
 NIE, gdy: "W dzisiejszych czasach", "Coraz więcej osób", "Każdy z nas", definicja pojęcia, zapowiedź ("dziś opowiem o"), pytanie retoryczne z oczywistą odpowiedzią, albo typ otwarcia, którego marka nigdy nie używa.
 
@@ -28,9 +28,9 @@ NIE, gdy w tekście jest choć jedno słowo z listy zakazanych.
 
 ## 5. Jedno wezwanie na koniec
 
-Czytelnik ma zrobić jedną rzecz.
+Czytelnik ma zrobić jedną rzecz wobec marki. Wezwanie to prośba o działanie skierowane do marki albo o rozpowszechnienie: napisz, kliknij, kup, udostępnij, skomentuj, zapisz się. Porada użytkowa ("podlewaj raz w tygodniu", "otwórz okno na noc") to treść tekstu, nie wezwanie.
 
-NIE, gdy na końcu jest i pytanie, i prośba o udostępnienie, i link.
+NIE, gdy na końcu jest więcej niż jedno wezwanie, np. pytanie, prośba o udostępnienie i link naraz.
 
 ## 6. Długość
 
@@ -46,9 +46,11 @@ NIE, gdy znak w tekście nie zgadza się z typografią z profilu. Dwa cytaty.
 
 ## 7b. Konstrukcje AI - zawsze
 
-Niezależnie od profilu, bo żadna marka nie ma ich jako cechy stylu. Lista i przykłady w `wzorce-slopu-pl.md`. Wypisz każde znalezione miejsce osobno, z cytatem i nazwą wzorca.
+Lista i przykłady w `wzorce-slopu-pl.md`. Wynik podajesz jako tabelę wszystkich 20 wzorców: wzorzec | jest / nie ma | cytat (przy "jest"). Czytelnik widzi od razu, co się kwalifikuje, a co nie. Dwa wzorce (1 kontrast binarny, 18 zdanie-akapit) sprawdzasz względem profilu: jeśli profil pokazuje je jako cechę marki z cytatem, to "nie ma (cecha marki)".
 
-NIE, gdy znaleziono choć jedno.
+Fragment, który poległ już w innym punkcie (np. 3 albo 5), nie liczy się drugi raz tutaj, i jeden fragment pasuje do jednego wzorca, najlepiej dopasowanego.
+
+NIE, gdy choć jeden wzorzec ma "jest".
 
 ## 8. Test tygodnia
 

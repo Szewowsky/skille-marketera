@@ -1,0 +1,79 @@
+{
+  "skill_name": "straznik-glosu-marki",
+  "evals": [
+    {
+      "id": 0,
+      "name": "ekstrakcja-8-tekstow",
+      "prompt": "Mam teksty mojej firmy w folderze glos-marki/korpus/ i brief w glos-marki/brief.md. Wyprowadź z nich profil głosu marki i zapisz jako glos-marki/glos.md. Chcę wiedzieć, jak pisze moja firma, żeby dać to zespołowi.",
+      "expected_output": "patrz assertions",
+      "files": [],
+      "assertions": [
+        "glos.md ma 9 sekcji: rytm, otwarcia, forma, emoji i typografia, słowa firmowe, słowa zakazane, czego nigdy nie robi, zdania-wzorce, reguły ręczne",
+        "Status profilu to 'wstępny' (8 tekstów, przedział 5-9)",
+        "Sekcja typografii podaje półpauzę '–' jako myślnik marki z liczbą wystąpień i emoji = 0",
+        "Forma: per Ty, marka o sobie 'my'",
+        "Słowa firmowe zawierają 'bez pytań' i 'w dniu roboczym' z liczbą wystąpień",
+        "Słowa zakazane zawierają 'rewolucyjny' (potwierdzone przez nieobecność) i 'produkt' oznaczone jako z briefu, nie widziane w korpusie",
+        "Każda reguła w sekcjach 1-8 ma cytat z korpusu, który występuje znak w znak w plikach korpus/",
+        "Odpowiedź do użytkownika wymienia 3 reguły, których brief nie mówi, a korpus tak"
+      ]
+    },
+    {
+      "id": 1,
+      "name": "walidacja-zgodny",
+      "prompt": "Sprawdź, czy tekst z pliku tekst.md brzmi jak nasza marka i czy mogę go opublikować. Profil głosu marki jest w glos-marki/glos.md.",
+      "expected_output": "patrz assertions",
+      "files": [],
+      "assertions": [
+        "Raport ma osobne linie PUNKT dla 1,2,3,4,5,6,7a,7b,8 (dziewięć punktów) z PASS albo NIE",
+        "Każdy punkt ma linię Dowód z cytatem w cudzysłowie; żaden PASS bez cytatu",
+        "Cytaty w raporcie występują znak w znak w tekst.md (sprawdzone 3 losowe)",
+        "Punkty 3, 4 i 7a mają dwa cytaty: z tekstu i z glos.md",
+        "Raport nie zawiera propozycji przepisania: brak fraz 'lepiej byłoby', 'proponuję', 'zamiast tego', 'można by' ani wariantu zdania z tekstu",
+        "Podsumowanie ma trzy linie PASS X z 8 / NIE / Werdykt i liczba NIE zgadza się z punktami wyżej",
+        "Walidacja została uruchomiona jako osobny sub-agent (Agent tool), nie w głównym wątku",
+        "Wynik 8 z 8 PASS, werdykt 'do publikacji'",
+        "Punkt 7a PASS z uzasadnieniem, że półpauza jest zgodna z profilem"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "walidacja-pauza-dluga",
+      "prompt": "Czy ten post (tekst.md) przejdzie u szefa? Nasz głos marki: glos-marki/glos.md. Powiedz mi punkt po punkcie, co jest nie tak.",
+      "expected_output": "patrz assertions",
+      "files": [],
+      "assertions": [
+        "Raport ma osobne linie PUNKT dla 1,2,3,4,5,6,7a,7b,8 (dziewięć punktów) z PASS albo NIE",
+        "Każdy punkt ma linię Dowód z cytatem w cudzysłowie; żaden PASS bez cytatu",
+        "Cytaty w raporcie występują znak w znak w tekst.md (sprawdzone 3 losowe)",
+        "Punkty 3, 4 i 7a mają dwa cytaty: z tekstu i z glos.md",
+        "Raport nie zawiera propozycji przepisania: brak fraz 'lepiej byłoby', 'proponuję', 'zamiast tego', 'można by' ani wariantu zdania z tekstu",
+        "Podsumowanie ma trzy linie PASS X z 8 / NIE / Werdykt i liczba NIE zgadza się z punktami wyżej",
+        "Walidacja została uruchomiona jako osobny sub-agent (Agent tool), nie w głównym wątku",
+        "Punkt 7a NIE z cytatem zawierającym pauzę '—' oraz cytatem z profilu o półpauzie",
+        "Pozostałe punkty PASS, werdykt 'do poprawek'"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "walidacja-przyneta",
+      "prompt": "Napisałem post na LinkedIn (tekst.md). Przeleć go pod kątem tego, czy brzmi jak AI i czy pasuje do naszego głosu marki (glos-marki/glos.md).",
+      "expected_output": "patrz assertions",
+      "files": [],
+      "assertions": [
+        "Raport ma osobne linie PUNKT dla 1,2,3,4,5,6,7a,7b,8 (dziewięć punktów) z PASS albo NIE",
+        "Każdy punkt ma linię Dowód z cytatem w cudzysłowie; żaden PASS bez cytatu",
+        "Cytaty w raporcie występują znak w znak w tekst.md (sprawdzone 3 losowe)",
+        "Punkty 3, 4 i 7a mają dwa cytaty: z tekstu i z glos.md",
+        "Raport nie zawiera propozycji przepisania: brak fraz 'lepiej byłoby', 'proponuję', 'zamiast tego', 'można by' ani wariantu zdania z tekstu",
+        "Podsumowanie ma trzy linie PASS X z 8 / NIE / Werdykt i liczba NIE zgadza się z punktami wyżej",
+        "Walidacja została uruchomiona jako osobny sub-agent (Agent tool), nie w głównym wątku",
+        "Co najmniej 3 NIE, werdykt 'do przepisania od nowa'",
+        "Punkt 4 NIE z cytatem 'rewolucyjna' lub 'innowacyjna' lub 'produkty' i wpisem z profilu",
+        "Punkt 7b NIE z nazwanymi wzorcami: co najmniej kontrast binarny, trójki, pseudogłęboka puenta",
+        "Punkt 5 NIE (trzy wezwania: sklep, udostępnij, komentarz)",
+        "Punkt 7a NIE (pauza '—' i emoji wbrew profilowi)"
+      ]
+    }
+  ]
+}

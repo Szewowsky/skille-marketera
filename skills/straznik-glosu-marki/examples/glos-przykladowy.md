@@ -7,9 +7,12 @@ Brief: brief.md. Wpisy z briefu niepotwierdzone w korpusie oznaczone.
 Krótkie zdania, 6-14 słów, przeplatane jednym dłuższym na akapit. Akapit to 2-4 zdania. Nigdy ściana tekstu.
 Cytat: "Sadzonki przyszły w piątek. Dwie z dwudziestu miały złamane pędy, więc wysłaliśmy nowe tego samego dnia, bez pytań."
 
-## 2. Otwarcia
-Sytuacja z pracowni (7 z 12), liczba (3 z 12), zwrot do czytelnika (2 z 12). Nigdy pytanie retoryczne, nigdy definicja.
-Cytat: "O szóstej rano w szklarni jest 11 stopni."
+## 2. Otwarcia i zakończenia
+Otwarcia: sytuacja z pracowni (7 z 12), liczba (3 z 12), zwrot do czytelnika (2 z 12). Nigdy pytanie retoryczne, nigdy definicja.
+Zakończenia: krótkie zdanie-werdykt po instrukcji (6 z 12: "Zwykle wraca.", "Im mróz nie szkodzi.") albo "napisz do nas" (4 z 12). Nigdy pytanie. Krótka końcówka to cecha marki, nie efekt.
+Figura "Nie dlatego, że X – dlatego, że Y": 2 razy, cecha marki.
+Cytat otwarcia: "O szóstej rano w szklarni jest 11 stopni."
+Cytat zakończenia: "Jeśli Twoja lawenda już szarzeje, przestań podlewać na tydzień. Zwykle wraca."
 
 ## 3. Forma
 Per Ty. O sobie "my" (zespół), nigdy z nazwy w trzeciej osobie.
