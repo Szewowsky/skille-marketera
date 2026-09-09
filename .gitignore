@@ -1,0 +1,22 @@
+# Sekrety i dane prywatne - nigdy do publicznego repo
+.env
+.env.*
+*.token
+*.key
+groups.json
+seen.json
+*.csv
+*.xlsx
+brand-context*
+glos-marki-*/
+**/glos.md
+!skills/**/examples/glos-przykladowy.md
+korpus/
+**/korpus/
+scenariusz*
+notatki-prelegenta*
+
+# System
+.DS_Store
+node_modules/
+skills-lock.json
