@@ -1,8 +1,8 @@
-# Wzorce slopu po polsku
+# Wzorce slopu po polsku (25)
 
-Konstrukcje, które zdradzają tekst pisany "jak każda firma z AI". Sprawdzane zawsze, z dwoma wyjątkami względem profilu (wzorce 1 i 18), bo niektóre marki mają je w korpusie jako własną figurę. Szkielet z no-ai-slop (Peter Yang, MIT), zlokalizowany, nie przetłumaczony.
+Konstrukcje, które zdradzają tekst pisany "jak każda firma z AI". Sprawdzane zawsze, z dwoma wyjątkami względem profilu (wzorce 1 i 18), bo niektóre marki mają je w korpusie jako własną figurę. Szkielet z no-ai-slop (Peter Yang, MIT), zlokalizowany, nie przetłumaczony. Wzorce 21-25 dopisane 2026-09-09 na podstawie 16 polskich źródeł (copywriterzy, GeekWeek, LinkedIn Pulse, Wykop); najczęściej wymieniane przez Polaków: 17, 20, 1, 21, typografia.
 
-Jak używać: przy punkcie 7b przejdź wszystkie 20 w tabeli (wzorzec | jest / nie ma | cytat). Przy "jest" cytat znak w znak. Jeden fragment tekstu pasuje do jednego wzorca, najlepiej dopasowanego. Bez proponowania wersji.
+Jak używać: przy punkcie 7b przejdź wszystkie 25 w tabeli (wzorzec | jest / nie ma | cytat). Przy "jest" cytat znak w znak. Jeden fragment tekstu pasuje do jednego wzorca, najlepiej dopasowanego. Bez proponowania wersji.
 
 | # | Wzorzec | Jak wygląda po polsku | Co jest nie tak |
 |---|---|---|---|
@@ -26,6 +26,11 @@ Jak używać: przy punkcie 7b przejdź wszystkie 20 w tabeli (wzorzec | jest / n
 | 18 | Zdanie-akapit na koniec | osobna linijka, jedno krótkie zdanie, dla efektu | Sztuczna waga; jeśli marka tak robi w korpusie, to punkt 3, nie 7b |
 | 19 | Formatowanie-slop | emoji w nagłówkach, bold w środku zdań, lista tam, gdzie lepsze dwa zdania | Struktura udaje treść |
 | 20 | Puste przysłówki i frazy | "naprawdę", "faktycznie", "w gruncie rzeczy", "warto zauważyć", "nie da się ukryć" | Tnij, gdy nic nie wnoszą. UWAGA: jeśli fraza jest w profilu jako firmowa, to cecha marki, nie slop |
+| 21 | "Nie tylko X, ale także Y" | "Nie tylko oszczędzasz czas, ale przede wszystkim budujesz przewagę." / "zarówno..., jak i..." | Druga po kontraście ulubiona formuła AI po polsku (5 z 16 polskich źródeł); dopina drugi człon dla rytmu, nie dla treści |
+| 22 | Metronom | każdy akapit 3-4 zdania, każde zdanie 12-16 słów, żadnego krótkiego ani długiego | Równy rytm bez oddechu; człowiek pisze nierówno. Policz: jeśli rozrzut długości zdań jest mniejszy niż w profilu marki, to "jest" |
+| 23 | Kalka z angielskiego | "adresować problem", "oferta dedykowana", "w oparciu o", "holistyczne podejście", "robić różnicę" | Zdanie zbudowane po angielsku polskimi słowami. UWAGA: jeśli profil ma frazę jako firmową (np. "holistyczny" u AI_Marketers), to cecha marki |
+| 24 | Asekuracja | "wydaje się, że", "zaleca się", "w niektórych przypadkach", "może warto rozważyć" | Model nie chce się mylić, więc nie mówi nic. Marka z opinią tak nie pisze |
+| 25 | Zapowiedź i autoetykieta | "W tym artykule przyjrzymy się...", "Oto kilka kluczowych aspektów:", "Jako ekspert z wieloletnim doświadczeniem..." | Tekst mówi, co zaraz powie, albo kim jest autor, zamiast po prostu to powiedzieć |
 
 ## Trzy warstwy słów
 

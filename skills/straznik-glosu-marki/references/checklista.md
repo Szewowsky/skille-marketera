@@ -48,7 +48,7 @@ NIE, gdy znak w tekście nie zgadza się z typografią z profilu. Dwa cytaty.
 
 ## 7b. Konstrukcje AI - zawsze
 
-Lista i przykłady w `wzorce-slopu-pl.md`. Wynik podajesz jako tabelę wszystkich 20 wzorców: wzorzec | jest / nie ma | cytat (przy "jest"). Czytelnik widzi od razu, co się kwalifikuje, a co nie. Dwa wzorce (1 kontrast binarny, 18 zdanie-akapit) sprawdzasz względem profilu: jeśli profil pokazuje je jako cechę marki z cytatem, to "nie ma (cecha marki)".
+Lista i przykłady w `wzorce-slopu-pl.md`. Wynik podajesz jako tabelę wszystkich 25 wzorców: wzorzec | jest / nie ma | cytat (przy "jest"). Czytelnik widzi od razu, co się kwalifikuje, a co nie. Dwa wzorce (1 kontrast binarny, 18 zdanie-akapit) sprawdzasz względem profilu: jeśli profil pokazuje je jako cechę marki z cytatem, to "nie ma (cecha marki)".
 
 Ta tabela to pełny inwentarz: wzorzec dostaje "jest" także wtedy, gdy jego fragment poległ już w innym punkcie. Wewnątrz tabeli jeden fragment pasuje do jednego wzorca, najlepiej dopasowanego.
 

@@ -13,7 +13,7 @@ Sprawdzasz tekst według 8 punktów checklisty względem profilu i podajesz dowo
 
 ## Zasada nadrzędna: bez cytatu nie ma PASS
 
-Przy każdym punkcie dosłowny cytat z ocenianego tekstu, w cudzysłowie, znak w znak (białe znaki normalizujesz, teksty ze stron mają niełamliwe spacje). Punkt bez cytatu dostaje NIE. Przy punktach porównujących tekst z profilem (3, 4, 7a) dwa cytaty: z tekstu i z profilu. Przy 7b tabela wszystkich 20 wzorców: wzorzec | jest / nie ma | cytat przy "jest".
+Przy każdym punkcie dosłowny cytat z ocenianego tekstu, w cudzysłowie, znak w znak (białe znaki normalizujesz, teksty ze stron mają niełamliwe spacje). Punkt bez cytatu dostaje NIE. Przy punktach porównujących tekst z profilem (3, 4, 7a) dwa cytaty: z tekstu i z profilu. Przy 7b tabela wszystkich 25 wzorców: wzorzec | jest / nie ma | cytat przy "jest".
 
 W punktach 1-6 i 7a jeden fragment tekstu pada najwyżej raz. Trzy NIE mają pochodzić z trzech różnych miejsc tekstu. Punkt 7b jest osobną warstwą: tabela pokazuje każdy wzorzec obecny w tekście z cytatem, także gdy ten fragment poległ już wyżej. Wewnątrz 7b jeden fragment pasuje do jednego wzorca. Zanim dasz NIE za coś, co wygląda na cechę stylu (krótka końcówka, figura "nie X, tylko Y", półpauza), sprawdź w profilu, czy marka tak pisze.
 
@@ -33,7 +33,7 @@ PUNKT 7b - PASS albo NIE
 |---|---|---|---|
 | 1 | Kontrast binarny | nie ma (cecha marki) | |
 | 2 | Odchrząknięcie na start | jest | "Powiem wprost." |
-| ... wszystkie 20 ... |
+| ... wszystkie 25 ... |
 ```
 
 Zanim napiszesz podsumowanie, policz linie PUNKT: ma ich być dziewięć (1, 2, 3, 4, 5, 6, 7a, 7b, 8). Brak którejkolwiek = dopisz. W podsumowaniu 7a i 7b liczą się jako jeden punkt 7.

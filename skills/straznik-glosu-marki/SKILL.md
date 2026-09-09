@@ -27,7 +27,7 @@ Gdy folderu nie ma, uruchom Konfigurację zamiast pytać ad hoc. Gdy jest kilka 
 - Użytkownik wywołuje skill bez tekstu (`/straznik-glosu-marki`), mówi "zacznijmy", "skonfiguruj", "poprowadź mnie", albo nie ma folderu marki → **Konfiguracja** (`references/konfiguracja.md`): sześć kroków, jedno pytanie naraz, stan w `glos-marki/config.md`. Gdy `config.md` istnieje z niedokończonym krokiem, kontynuuj od niego zamiast zaczynać od zera.
 - Użytkownik prosi o profil, głos, "z czego pisze nasza firma", albo nie ma `glos.md` → **Ekstrakcja**.
 - Jest `glos.md` i użytkownik daje tekst do sprawdzenia → **Walidacja**.
-- Użytkownik pyta o oznaki AI, slop, konkretny wzorzec ("co to kontrast binarny", "po czym poznać tekst z AI", "pokaż listę") → **Wyjaśnij**: odpowiedz z `references/wzorce-slopu-pl.md` po ludzku, z jednym przykładem po polsku na wzorzec, bez żargonu. Na pytanie ogólne pokaż wszystkie 20 w tabeli (numer, nazwa, przykład, co jest nie tak) i powiedz, że dwa z nich (1 i 18) skill sprawdza względem marki, bo bywają jej cechą. Na pytanie o jeden wzorzec: definicja, dwa przykłady, jak wygląda w raporcie. Nie oceniaj tu żadnego tekstu; jeśli użytkownik przy okazji wkleja tekst, zaproponuj Walidację.
+- Użytkownik pyta o oznaki AI, slop, konkretny wzorzec ("co to kontrast binarny", "po czym poznać tekst z AI", "pokaż listę") → **Wyjaśnij**: odpowiedz z `references/wzorce-slopu-pl.md` po ludzku, z jednym przykładem po polsku na wzorzec, bez żargonu. Na pytanie ogólne pokaż wszystkie 25 w tabeli (numer, nazwa, przykład, co jest nie tak) i powiedz, że dwa z nich (1 i 18) skill sprawdza względem marki, bo bywają jej cechą. Na pytanie o jeden wzorzec: definicja, dwa przykłady, jak wygląda w raporcie. Nie oceniaj tu żadnego tekstu; jeśli użytkownik przy okazji wkleja tekst, zaproponuj Walidację.
 - Użytkownik daje tekst, a `glos.md` nie ma → powiedz, że bez profilu walidacja sprawdzi tylko punkty niezależne od marki (1, 2, 5, 6, 7b, 8), i zaproponuj najpierw ekstrakcję.
 
 ## Ekstrakcja
@@ -56,7 +56,7 @@ Wynik sub-agenta pokaż użytkownikowi w całości, bez skracania i bez własneg
 
 Jesteś niezależnym recenzentem. Nie pisałeś tego tekstu i nie wiesz, jak powstawał. Sprawdzasz go według 8 punktów checklisty względem profilu głosu marki i podajesz dowody.
 
-Zasada nadrzędna: **bez cytatu nie ma PASS.** Przy każdym punkcie dosłowny cytat z ocenianego tekstu, w cudzysłowie, znak w znak. Punkt bez cytatu dostaje NIE. Przy punktach porównujących tekst z profilem (3, 4, 7a) dwa cytaty: z tekstu i z profilu. Przy 7b tabela wszystkich 20 wzorców z listy: wzorzec | jest / nie ma | cytat przy "jest".
+Zasada nadrzędna: **bez cytatu nie ma PASS.** Przy każdym punkcie dosłowny cytat z ocenianego tekstu, w cudzysłowie, znak w znak. Punkt bez cytatu dostaje NIE. Przy punktach porównujących tekst z profilem (3, 4, 7a) dwa cytaty: z tekstu i z profilu. Przy 7b tabela wszystkich 25 wzorców z listy: wzorzec | jest / nie ma | cytat przy "jest".
 
 W punktach 1-6 i 7a jeden fragment tekstu pada najwyżej raz: jeśli końcówka poległa w punkcie 3, nie wraca w 5. Trzy NIE mają pochodzić z trzech różnych miejsc tekstu. Punkt 7b jest osobną warstwą: tabela pokazuje każdy wzorzec obecny w tekście z cytatem, także gdy ten fragment poległ już wyżej, bo czytelnik ma zobaczyć pełen inwentarz konstrukcji AI. Wewnątrz 7b jeden fragment pasuje do jednego wzorca, najlepiej dopasowanego. Zanim dasz NIE za coś, co wygląda na cechę stylu (krótka końcówka, figura "nie X, tylko Y", półpauza), sprawdź w profilu, czy marka tak pisze.
 
@@ -76,7 +76,7 @@ PUNKT 7b - PASS albo NIE
 |---|---|---|---|
 | 1 | Kontrast binarny | nie ma (cecha marki) | |
 | 2 | Odchrząknięcie na start | jest | "Powiem wprost." |
-| ... wszystkie 20 ... |
+| ... wszystkie 25 ... |
 ```
 
 Zanim napiszesz podsumowanie, policz linie PUNKT: ma ich być dziewięć (1, 2, 3, 4, 5, 6, 7a, 7b, 8). Brak którejkolwiek = raport niekompletny, dopisz ją. W podsumowaniu 7a i 7b liczą się jako jeden punkt 7 (NIE, gdy którykolwiek jest NIE).
