@@ -17,8 +17,9 @@ for f in skills/*/SKILL.md; do
 done
 
 echo "== pauzy i półpauzy w plikach repo =="
-if grep -rn --include='*.md' --include='*.sh' -e '—' -e '–' . --exclude-dir=.git --exclude-dir=node_modules | grep -v 'tests/' | grep -v 'references/' ; then
-  echo "FAIL znaleziono pauzę/półpauzę (poza tests/ i references/, gdzie są przykładami)"; fail=1
+# Pauzy w cudzysłowie to cytaty/przykłady - wycinamy je przed sprawdzeniem. tests/ i references/ to fixtures.
+if grep -rn --include='*.md' --include='*.sh' -e '—' -e '–' . --exclude-dir=.git --exclude-dir=node_modules | grep -v '/tests/' | grep -v '/references/' | sed -E 's/"[^"]*"//g' | grep -e '—' -e '–' ; then
+  echo "FAIL znaleziono pauzę/półpauzę poza cudzysłowem (tests/ i references/ pominięte)"; fail=1
 else
   echo "ok brak pauz"
 fi
