@@ -51,7 +51,7 @@ Sprawdzone: <N> stron, <M> kont reklamowych. Nie udało się sprawdzić: <lista 
 - <Etykieta>: strona nie odpowiedziała (przekroczony czas). Spróbuję przy następnym sprawdzeniu.
 ```
 
-Gdy nie zmieniło się nic istotnego, sekcja Istotne ma jedno zdanie: "Bez istotnych zmian." i reszta raportu to same drobiazgi. Przy pierwszym pobraniu (baza) raport ma zamiast sekcji Istotne sekcję "Stan wyjściowy" z jedną linią na cel: nagłówek, status, cena, liczba aktywnych reklam.
+Gdy nie zmieniło się nic istotnego, sekcja Istotne ma jedno zdanie: "Bez istotnych zmian." i reszta raportu to same drobiazgi. Przy pierwszym pobraniu (baza) raport ma zamiast sekcji Istotne sekcję "Stan wyjściowy" z jedną linią na cel: nagłówek, status, cena, liczba aktywnych reklam. Rzeczy, które zauważyłeś przy pobraniu i które przydadzą się przy następnym porównaniu (martwy formularz, czynny przycisk starej edycji, ucięta lista reklam), idą do opcjonalnej sekcji "Warto wiedzieć przy następnym sprawdzeniu" na końcu raportu, w bazie i w każdym późniejszym raporcie.
 
 ## Reguły
 

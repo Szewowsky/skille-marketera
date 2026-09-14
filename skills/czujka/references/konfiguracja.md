@@ -10,7 +10,7 @@ Stany kroków: `do zrobienia`, `w toku`, `gotowe`, a K2 i K3 mogą mieć `pomini
 
 ## Kroki
 
-**K1 Zestaw.** Zapytaj, czy czujka ma pilnować jednej firmy (własne strony i rynek razem), czy kilku klientów (agencja). Jedna: folder `czujka/`. Kilka: `czujka-<klient>/` per klient. Utwórz folder w korzeniu projektu (tam, gdzie `.claude/`), z `snapshoty/`, `raporty/` i `config.md` z szablonu niżej. Folder z zawartością: nie twórz nowego, powiedz co w nim jest i idź dalej.
+**K1 Zestaw.** Zapytaj, czy czujka ma pilnować jednej firmy (własne strony i rynek razem), czy kilku klientów (agencja). Jedna: folder `czujka/`. Kilka: `czujka-<klient>/` per klient. Utwórz folder w korzeniu projektu (tam, gdzie `.claude/`), z `snapshoty/`, `raporty/` i `config.md` z szablonu niżej. Gdy projekt jest w gicie, sprawdź, że `.gitignore` ma `/czujka*/**` (snapshoty i surowe zrzuty nie do historii) i `.firecrawl/` (podręczna pamięć CLI); brakujące dopisz. Folder z zawartością: nie twórz nowego, powiedz co w nim jest i idź dalej.
 
 **K2 Strony.** Zapytaj, jakie adresy obserwować i co u każdego jest ważne (cena? status zapisów? nagłówek? nowe sekcje?). Przyjmij adresy jeden po drugim albo listą. Dla każdego: jedno pobranie, żeby potwierdzić, że strona odpowiada, etykieta (nazwa firmy albo programu), notatka "ważne". Podpowiedz, że własne strony też warto pilnować: po wdrożeniu ktoś urywa przycisk, countdown zamiera, cena rozjeżdża się między stroną i cennikiem. Gdy użytkownik podaje osobę zamiast firmy, powiedz, że czujka jest do firm i stron, i poproś o adres firmowy. "Nie mam" albo "tylko reklamy" = `pominięte`.
 

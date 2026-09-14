@@ -13,7 +13,7 @@ Ten plik czyta Claude Code albo Codex, gdy użytkownik powie np. "Zainstaluj ski
 6. Jeśli projekt jest repozytorium gita (`git rev-parse --is-inside-work-tree`), dopisz do `.gitignore` linie z sekcji "Do .gitignore" niżej, żeby teksty i profil marki nie trafiły do gita użytkownika. Jeśli nie jest, pomiń ten krok i powiedz o tym w podsumowaniu.
 7. Jeśli projekt ma `CLAUDE.md` albo `AGENTS.md`, dopisz jedną linię: "Skille z skille-marketera: <lista>. Walidator: `.claude/agents/walidator.md`." Jeśli nie ma, nie twórz.
 8. Usuń folder tymczasowy tylko wtedy, gdy sam go utworzyłeś w kroku 1 (`/tmp/skille-marketera`). Nigdy nie usuwaj ścieżki podanej przez użytkownika.
-9. Powiedz użytkownikowi, co zostało skopiowane i jak zacząć: teksty marki do `glos-marki/korpus/`, potem "Wyprowadź głos marki", potem "Sprawdź ten tekst". Dla czujki: "Skonfiguruj czujkę". Dla grup: "Skonfiguruj grupy". Dla radaru: "Skonfiguruj radar".
+9. Powiedz użytkownikowi, co zostało skopiowane i jak zacząć: "Skonfiguruj skille marketera" (skill `konfigurator` pokaże tabelę gotowości i poprowadzi przez konfigurację każdego skilla po kolei). Gdy użytkownik zainstalował jeden skill bez konfiguratora: strażnik = teksty marki do `glos-marki/korpus/`, potem "Wyprowadź głos marki"; czujka = "Skonfiguruj czujkę"; grupy = "Skonfiguruj grupy"; radar = "Skonfiguruj radar".
 
 ## Do .gitignore
 
@@ -26,6 +26,7 @@ Ten plik czyta Claude Code albo Codex, gdy użytkownik powie np. "Zainstaluj ski
 /grupy-fb*/**
 /radar*/**
 .env
+.firecrawl/
 ```
 
 ## Aktualizacja

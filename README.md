@@ -10,7 +10,7 @@ Otwórz Claude Code albo Codex w swoim projekcie i powiedz:
 Zainstaluj skille z https://github.com/Szewowsky/skille-marketera
 ```
 
-Agent czyta `INSTALACJA.md` z tego repo i kopiuje do Twojego projektu: skille do `.claude/skills/`, sub-agenta walidatora do `.claude/agents/`, szablon folderu `glos-marki/` i wpisy do `.gitignore`. Nic globalnego, nic poza tym repo. Potem: teksty marki do `glos-marki/korpus/`, "Wyprowadź głos marki", "Sprawdź ten tekst".
+Agent czyta `INSTALACJA.md` z tego repo i kopiuje do Twojego projektu: skille do `.claude/skills/`, sub-agenta walidatora do `.claude/agents/`, szablon folderu `glos-marki/` i wpisy do `.gitignore`. Nic globalnego, nic poza tym repo. Potem jedno zdanie: "Skonfiguruj skille marketera" - konfigurator pokaże, co gotowe, czego brakuje, i poprowadzi przez resztę.
 
 Grupy FB potrzebują darmowego konta Apify i klucza w `APIFY_API_TOKEN` (skill prowadzi przez to w konfiguracji). Czujka potrzebuje dodatkowo klucza Firecrawl (`firecrawl login` albo `FIRECRAWL_API_KEY` w `.env`). Potem: "Skonfiguruj czujkę", a po pierwszym porównaniu "Załóż rutynę".
 
@@ -24,6 +24,7 @@ Alternatywa dla jednego skilla bez agenta: `npx skills add Szewowsky/skille-mark
 | `czujka` | Pilnuje stron www (własnych i rynku) oraz reklam w Meta Ads Library: pobiera stan wyrenderowanej strony przez Firecrawl, porównuje z poprzednim i pisze raport "było -> jest" z podziałem na istotne i drobiazgi. | gotowy |
 | `poranny-radar` | Poranny brief z eksportu mailingowego i klocków (sprzedaż, skrzynka): trzy rzeczy na dziś, co traci, co zaskoczyło, wnioski z licznikiem obserwacji, które kolejny brief cytuje z powrotem. Liczby liczy skrypt. | gotowy |
 | `grupy-fb` | Czyta nowe posty z wybranych grup Facebook, odsiewa według tematu użytkownika, pisze raport "o co pytają, na co narzekają, co wraca" z pomysłami i pilnuje wzmianek o marce. Autorzy tylko z imienia, bez linków do profili, anonimizacja w skrypcie zanim agent cokolwiek zobaczy. | gotowy |
+| `konfigurator` | Jedno wejście do reszty: sprawdza, co jest zainstalowane i skonfigurowane, czy są klucze (Firecrawl, Apify), pokazuje tabelę gotowości i prowadzi przez konfigurację wybranego skilla, krok po kroku, jego własną instrukcją. | gotowy |
 | `audyt-strony` | Wrapper na audyt strony (Impeccable) z instrukcją. | planowany |
 | `straznik-wysylki` | Checklista przed wysyłką newslettera, z dowodami. | planowany |
 
