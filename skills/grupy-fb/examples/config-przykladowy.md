@@ -10,7 +10,7 @@ Tryb: jedna firma (folder: grupy-fb/)
 | K3 Marka | gotowe | 3 frazy |
 | K4 Klucz | gotowe | APIFY_API_TOKEN ustawiony |
 | K5 Pierwsze sprawdzenie | gotowe | 2026-09-09 |
-| K6 Kadencja | gotowe | codziennie 7:30 |
+| K6 Kadencja | gotowe | co 2 dni 7:30 |
 
 ## Temat
 Interesuje mnie: o co pytają i na co narzekają właściciele małych firm i marketerzy w kwestii AI, automatyzacji i pracy z klientem. Pomijam: ogłoszenia o pracę, zlecenia, memy bez treści, sprzedaż kursów.
@@ -27,5 +27,5 @@ Interesuje mnie: o co pytają i na co narzekają właściciele małych firm i ma
 - youtube.com/@pracownia-zielnik
 
 ## Ustawienia
-- Limit postów na grupę: 20
-- Kadencja: codziennie 7:30 (zadanie cykliczne agenta)
+- Limit postów na grupę: 10
+- Kadencja: co 2 dni 7:30 (zadanie cykliczne agenta, około 2,3 USD miesięcznie w planie Free)

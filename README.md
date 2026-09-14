@@ -12,7 +12,7 @@ Zainstaluj skille z https://github.com/Szewowsky/skille-marketera
 
 Agent czyta `INSTALACJA.md` z tego repo i kopiuje do Twojego projektu: skille do `.claude/skills/`, sub-agenta walidatora do `.claude/agents/`, szablon folderu `glos-marki/` i wpisy do `.gitignore`. Nic globalnego, nic poza tym repo. Potem jedno zdanie: "Skonfiguruj skille marketera" - konfigurator pokaże, co gotowe, czego brakuje, i poprowadzi przez resztę.
 
-Grupy FB potrzebują darmowego konta Apify i klucza w `APIFY_API_TOKEN` (skill prowadzi przez to w konfiguracji). Czujka potrzebuje dodatkowo klucza Firecrawl (`firecrawl login` albo `FIRECRAWL_API_KEY` w `.env`). Potem: "Skonfiguruj czujkę", a po pierwszym porównaniu "Załóż rutynę".
+Grupy FB potrzebują darmowego konta Apify i klucza w `APIFY_API_TOKEN` (skill prowadzi przez to w konfiguracji; najbezpieczniej z pęku kluczy, w tej samej linii polecenia). Pobieranie kosztuje: sprawdzenie trzech grup po 10 postów to około 0,15 USD, po 20 postów około 0,30 USD, a darmowy plan Apify to 5 USD miesięcznie, więc skill proponuje kadencję co 2-3 dni rano, nie codziennie. Czujka potrzebuje dodatkowo klucza Firecrawl (`firecrawl login` albo `FIRECRAWL_API_KEY` w `.env`). Potem: "Skonfiguruj czujkę", a po pierwszym porównaniu "Załóż rutynę".
 
 Alternatywa dla jednego skilla bez agenta: `npx skills add Szewowsky/skille-marketera --skill straznik-glosu-marki` (walidator uruchomi się wtedy jako zwykły sub-agent, bez ograniczenia narzędzi).
 

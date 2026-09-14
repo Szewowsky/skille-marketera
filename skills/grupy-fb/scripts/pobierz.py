@@ -6,10 +6,19 @@ więc pełnych nazwisk ani linków do profili nigdy nie widzi.
 Użycie:
   pobierz.py URL [URL ...] [--limit 20] [--widziane grupy-fb/widziane.json]
              [--marka "fraza;fraza;https://..."] [--wyjscie plik.json]
-             [--z-pliku surowe.json] [--oznacz-widziane]
+             [--z-pliku plik.json] [--oznacz-widziane]
 
-Token Apify: zmienna środowiskowa APIFY_API_TOKEN. Bez tokena skrypt kończy się
-błędem "brak_tokena" (chyba że --z-pliku). Tylko biblioteka standardowa.
+--z-pliku przyjmuje dwa formaty i rozpoznaje je po zawartości pliku:
+  - lista surowych itemów aktora Apify (tryb zapasowy, test),
+  - plik zapisany wcześniej przez --wyjscie (słownik z kluczem "posty").
+Dzięki temu oznaczenie postów jako widzianych po raporcie idzie z tego samego
+pliku wyjściowego, bez drugiego pobrania z Apify. Koszt i budżet prawdziwego
+runu jadą razem z plikiem wyjściowym i trafiają do statystyk w widziane.json.
+
+Token Apify: zmienna środowiskowa APIFY_API_TOKEN, można podać w tej samej
+linii polecenia (macOS: APIFY_API_TOKEN=$(security find-generic-password ...)).
+Bez tokena skrypt kończy się błędem "brak_tokena" (chyba że --z-pliku).
+Tylko biblioteka standardowa.
 """
 import argparse
 import json
@@ -43,6 +52,34 @@ def anonimizuj(nazwa):
     if len(czesci) == 1:
         return czesci[0]
     return f"{czesci[0]} {czesci[1][0]}."
+
+
+OTAGOWANIE = re.compile(
+    r"@\s?[A-ZĄĆĘŁŃÓŚŹŻ][a-ząćęłńóśźż]+(?:[-\s][A-ZĄĆĘŁŃÓŚŹŻ][a-ząćęłńóśźż]+){0,2}"
+)
+
+
+def bez_otagowan(tekst, frazy=()):
+    """Otagowana osoba w treści ('@Anna Kowalska') -> '@[osoba]'. Tylko wzorzec po
+    '@' z wielkiej litery, żadnych heurystyk na zwykłe zdania. Frazy marki
+    ('@Pracownia Zielnik') zostają, bo to nazwa firmy, nie osoba."""
+    tekst = tekst or ""
+    marki = [f.lower().lstrip("@") for f in frazy if f]
+
+    def zamien(m):
+        trafienie = m.group(0).lower()
+        if any(f and f in trafienie for f in marki):
+            return m.group(0)
+        return "@[osoba]"
+
+    return OTAGOWANIE.sub(zamien, tekst)
+
+
+def klucz_tresci(post):
+    """Ten sam post wklejony do dwóch grup: klucz z pierwszych 200 znaków treści
+    (małe litery, bez białych znaków). Krótkie posty zostawiamy bez klucza."""
+    tekst = re.sub(r"\s+", "", (post.get("text") or "").lower())
+    return tekst[:200] if len(tekst) >= 40 else None
 
 
 def pierwsze_zdanie(tekst):
@@ -100,7 +137,13 @@ def normalizuj(item, frazy):
         "udostepnienia": item.get("sharesCount", 0),
         "top_comments": komentarze,
     }
+    # Wzmianki liczymy z oryginalnej treści, dopiero potem chowamy otagowane osoby.
     post["wzmianki_marki"] = wzmianki(post, frazy)
+    post["text"] = bez_otagowan(post["text"], frazy)
+    if post["image_text"]:
+        post["image_text"] = bez_otagowan(post["image_text"], frazy)
+    for k in post["top_comments"]:
+        k["text"] = bez_otagowan(k["text"], frazy)
     return post
 
 
@@ -160,18 +203,33 @@ def main():
     ap.add_argument("--widziane", default=None)
     ap.add_argument("--marka", default="", help="frazy i linki do pilnowania, rozdzielone ';'")
     ap.add_argument("--wyjscie", default=None)
-    ap.add_argument("--z-pliku", default=None, help="surowe itemy aktora z pliku JSON zamiast Apify (test, zapas)")
-    ap.add_argument("--oznacz-widziane", action="store_true")
+    ap.add_argument("--z-pliku", default=None, help="JSON zamiast Apify: plik z --wyjscie albo surowe itemy aktora (format rozpoznawany sam)")
+    ap.add_argument("--oznacz-widziane", action="store_true", help="dopisz posty z wejścia do --widziane (po raporcie, razem z --z-pliku)")
     a = ap.parse_args()
 
     frazy = [f.strip() for f in a.marka.split(";") if f.strip()]
     wynik = {"data": time.strftime("%Y-%m-%d %H:%M"), "grupy": a.urls, "limit": a.limit}
 
+    przetworzone = False
     if a.z_pliku:
         with open(a.z_pliku, encoding="utf-8") as f:
-            items = json.load(f)
-        wynik["run"] = {"run_id": None, "status": "Z_PLIKU", "koszt_usd": 0.0}
-        wynik["budzet"] = None
+            dane = json.load(f)
+        if isinstance(dane, dict) and "posty" in dane:
+            # plik z --wyjscie: posty są już znormalizowane, koszt i budżet z prawdziwego runu
+            przetworzone = True
+            items = dane.get("posty") or []
+            wynik["run"] = dict(dane.get("run") or {})
+            wynik["run"].setdefault("run_id", None)
+            wynik["run"].setdefault("status", "Z_WYJSCIA")
+            wynik["run"]["koszt_usd"] = float(wynik["run"].get("koszt_usd") or 0.0)
+            wynik["run"]["zrodlo"] = f"{a.z_pliku} (pobranie z {dane.get('data')})"
+            wynik["budzet"] = dane.get("budzet")
+            if not a.urls:
+                wynik["grupy"] = dane.get("grupy") or []
+        else:
+            items = dane
+            wynik["run"] = {"run_id": None, "status": "Z_PLIKU", "koszt_usd": 0.0}
+            wynik["budzet"] = None
     else:
         token = os.environ.get("APIFY_API_TOKEN", "").strip()
         if not token:
@@ -180,7 +238,8 @@ def main():
         if not a.urls:
             print(json.dumps({"blad": "brak_grup"}, ensure_ascii=False))
             sys.exit(2)
-        wynik["budzet"] = budzet(token)
+        wynik["budzet_przed"] = budzet(token)
+        wynik["budzet"] = wynik["budzet_przed"]
         if wynik["budzet"].get("zostalo_usd") is not None and wynik["budzet"]["zostalo_usd"] <= 0:
             wynik["blad"] = "limit_wyczerpany"
             print(json.dumps(wynik, ensure_ascii=False, indent=2))
@@ -193,21 +252,41 @@ def main():
             wynik["szczegoly"] = tresc
             print(json.dumps(wynik, ensure_ascii=False, indent=2))
             sys.exit(4)
+        # budżet czytamy po runie, żeby liczba w raporcie była już po koszcie tego sprawdzenia
+        wynik["budzet"] = budzet(token)
         if wynik["run"]["status"] != "SUCCEEDED":
             wynik["blad"] = "run_" + wynik["run"]["status"].lower()
 
     widziane = wczytaj_widziane(a.widziane)
     znane = widziane.get("widziane", {})
-    nowe, pominiete = [], 0
+    nowe, pominiete, duplikaty = [], 0, 0
+    wg_tresci = {}
     for it in items:
-        p = normalizuj(it, frazy)
-        if p["post_url"] and p["post_url"] in znane:
+        p = it if przetworzone else normalizuj(it, frazy)
+        if p.get("post_url") and p["post_url"] in znane:
             pominiete += 1
             continue
+        klucz = klucz_tresci(p)
+        if klucz and klucz in wg_tresci:
+            # ten sam post wklejony do drugiej grupy: liczy się raz, grupy zapamiętujemy
+            pierwszy = wg_tresci[klucz]
+            if p.get("grupa") and p["grupa"] not in pierwszy["takze_w_grupach"]:
+                pierwszy["takze_w_grupach"].append(p["grupa"])
+            if p.get("post_url") and p["post_url"] not in pierwszy["duplikaty_url"]:
+                pierwszy["duplikaty_url"].append(p["post_url"])
+            pierwszy["kopie"] = len(pierwszy["takze_w_grupach"])
+            duplikaty += 1
+            continue
+        p.setdefault("takze_w_grupach", [p["grupa"]] if p.get("grupa") else [])
+        p.setdefault("duplikaty_url", [])
+        p.setdefault("kopie", 1)
+        if klucz:
+            wg_tresci[klucz] = p
         nowe.append(p)
 
     wynik["pobrane"] = len(items)
     wynik["pominiete_widziane"] = pominiete
+    wynik["duplikaty_tresci"] = duplikaty
     wynik["nowe"] = len(nowe)
     wynik["wzmianki_marki"] = sum(1 for p in nowe if p["wzmianki_marki"])
     wynik["posty"] = nowe
@@ -215,8 +294,9 @@ def main():
     if a.oznacz_widziane and a.widziane:
         dzis = time.strftime("%Y-%m-%d")
         for p in nowe:
-            if p["post_url"]:
-                znane[p["post_url"]] = dzis
+            for url in [p.get("post_url")] + list(p.get("duplikaty_url") or []):
+                if url:
+                    znane[url] = dzis
         # sprzątanie: wpisy starsze niż 60 dni
         try:
             prog = time.strftime("%Y-%m-%d", time.localtime(time.time() - 60 * 86400))

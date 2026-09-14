@@ -1,0 +1,263 @@
+[
+  {
+    "facebookUrl": "https://www.facebook.com/groups/100200300",
+    "url": "https://www.facebook.com/groups/100200300/permalink/9001/",
+    "time": "2026-09-09T07:12:00.000Z",
+    "user": {
+      "id": "1000001",
+      "name": "Marta Wiśniewska-Kot"
+    },
+    "text": "Hej, czy ktoś z Was ogarnia automatyczne raporty z Meta Ads do klienta? Robię to ręcznie w Excelu co poniedziałek i tracę pół dnia. Jakieś narzędzie, które nie kosztuje 200 dolców miesięcznie?",
+    "link": null,
+    "likesCount": 14,
+    "sharesCount": 0,
+    "commentsCount": 9,
+    "topComments": [
+      {
+        "commentId": "c1",
+        "text": "Looker Studio + darmowy konektor, ale trzeba się pobawić.",
+        "profileName": "Tomasz Zieliński",
+        "date": "2026-09-09T08:00:00.000Z"
+      },
+      {
+        "commentId": "c2",
+        "text": "My robimy to agentem w Claude Code, zrzuca CSV i pisze komentarz po polsku.",
+        "profileName": "Ola Nowak",
+        "date": "2026-09-09T08:30:00.000Z"
+      }
+    ],
+    "attachments": [],
+    "groupTitle": "Marketing w małej firmie (fixture)",
+    "legacyId": "9001",
+    "id": "ID9001"
+  },
+  {
+    "facebookUrl": "https://www.facebook.com/groups/100200300",
+    "url": "https://www.facebook.com/groups/100200300/permalink/9002/",
+    "time": "2026-09-09T09:40:00.000Z",
+    "user": {
+      "id": "1000002",
+      "name": "Paweł Kowalczyk"
+    },
+    "text": "Szukam grafika do 20 kreacji reklamowych, budżet do dogadania. Priv.",
+    "link": null,
+    "likesCount": 1,
+    "sharesCount": 0,
+    "commentsCount": 0,
+    "topComments": [],
+    "attachments": [],
+    "groupTitle": "Marketing w małej firmie (fixture)",
+    "legacyId": "9002",
+    "id": "ID9002"
+  },
+  {
+    "facebookUrl": "https://www.facebook.com/groups/100200300",
+    "url": "https://www.facebook.com/groups/100200300/permalink/9003/",
+    "time": "2026-09-10T06:05:00.000Z",
+    "user": {
+      "id": "1000003",
+      "name": "Katarzyna Lewandowska"
+    },
+    "text": "Obejrzałam wczoraj film Pracowni Zielnik o tym, jak agent pisze opisy produktów w sklepie ogrodniczym i szczerze: pierwszy raz zrozumiałam, po co mi to. Polecam, link poniżej.",
+    "link": "https://www.youtube.com/@pracownia-zielnik",
+    "likesCount": 41,
+    "sharesCount": 6,
+    "commentsCount": 12,
+    "topComments": [
+      {
+        "commentId": "c3",
+        "text": "Też widziałem, konkret bez lania wody.",
+        "profileName": "Michał Dąbrowski",
+        "date": "2026-09-10T07:00:00.000Z"
+      }
+    ],
+    "attachments": [],
+    "groupTitle": "Marketing w małej firmie (fixture)",
+    "legacyId": "9003",
+    "id": "ID9003"
+  },
+  {
+    "facebookUrl": "https://www.facebook.com/groups/100200300",
+    "url": "https://www.facebook.com/groups/100200300/permalink/9004/",
+    "time": "2026-09-10T10:20:00.000Z",
+    "user": {
+      "id": "1000004",
+      "name": "Bartek"
+    },
+    "text": "Klient znowu chce \"coś z AI\" ale nie umie powiedzieć co. Jak wy prowadzicie taką rozmowę, żeby wyszedł z tego konkretny zakres, a nie kolejny chatbot na stronie?",
+    "link": null,
+    "likesCount": 27,
+    "sharesCount": 2,
+    "commentsCount": 18,
+    "topComments": [
+      {
+        "commentId": "c4",
+        "text": "Pytam: co robisz ręcznie co tydzień i czego nienawidzisz. Tam jest zakres.",
+        "profileName": "Ewa Jabłońska",
+        "date": "2026-09-10T11:00:00.000Z"
+      }
+    ],
+    "attachments": [],
+    "groupTitle": "Marketing w małej firmie (fixture)",
+    "legacyId": "9004",
+    "id": "ID9004"
+  },
+  {
+    "facebookUrl": "https://www.facebook.com/groups/100200300",
+    "url": "https://www.facebook.com/groups/100200300/permalink/9005/",
+    "time": "2026-09-10T12:00:00.000Z",
+    "user": {
+      "id": "1000005",
+      "name": "Agnieszka Wójcik"
+    },
+    "text": "Narzekanie: trzeci klient w tym miesiącu wysyła mi teksty z ChatGPT do wrzucenia na LinkedIn i wszystkie brzmią tak samo. Jak im to powiedzieć, żeby się nie obrazili?",
+    "link": null,
+    "likesCount": 33,
+    "sharesCount": 1,
+    "commentsCount": 21,
+    "topComments": [
+      {
+        "commentId": "c5",
+        "text": "Pokaż im przycisk 'Seems like AI slop' na LinkedIn, działa lepiej niż tłumaczenie.",
+        "profileName": "Piotr Kamiński",
+        "date": "2026-09-10T12:30:00.000Z"
+      }
+    ],
+    "attachments": [],
+    "groupTitle": "Marketing w małej firmie (fixture)",
+    "legacyId": "9005",
+    "id": "ID9005"
+  },
+  {
+    "facebookUrl": "https://www.facebook.com/groups/100200300",
+    "url": "https://www.facebook.com/groups/100200300/permalink/9006/",
+    "time": "2026-09-10T13:15:00.000Z",
+    "user": {
+      "id": "1000006",
+      "name": "Robert Szymański"
+    },
+    "text": "Ktoś testował Pracownię Zielnik jako dostawcę sadzonek do biura? Chcemy zazielenić open space.",
+    "link": null,
+    "likesCount": 3,
+    "sharesCount": 0,
+    "commentsCount": 2,
+    "topComments": [],
+    "attachments": [],
+    "groupTitle": "Marketing w małej firmie (fixture)",
+    "legacyId": "9006",
+    "id": "ID9006"
+  },
+  {
+    "facebookUrl": "https://www.facebook.com/groups/100200300",
+    "url": "https://www.facebook.com/groups/100200300/permalink/9007/",
+    "time": "2026-09-10T14:00:00.000Z",
+    "user": {
+      "id": "1000007",
+      "name": "Joanna Krawczyk"
+    },
+    "text": "Mem dnia 😂",
+    "link": null,
+    "likesCount": 88,
+    "sharesCount": 10,
+    "commentsCount": 4,
+    "topComments": [],
+    "attachments": [
+      {
+        "thumbnail": "https://example.invalid/mem.jpg",
+        "__typename": "Photo",
+        "ocrText": "Kiedy klient mówi że zrobi grafikę sam w Canvie"
+      }
+    ],
+    "groupTitle": "Marketing w małej firmie (fixture)",
+    "legacyId": "9007",
+    "id": "ID9007"
+  },
+  {
+    "facebookUrl": "https://www.facebook.com/groups/100200300",
+    "url": "https://www.facebook.com/groups/100200300/permalink/9008/",
+    "time": "2026-09-10T15:30:00.000Z",
+    "user": {
+      "id": "1000008",
+      "name": "Grzegorz Piotrowski"
+    },
+    "text": "Pytanie do agencyjnych: jak liczycie czas na research konkurencji w wycenie? U mnie to zawsze wychodzi 'gratis' i potem żałuję.",
+    "link": null,
+    "likesCount": 19,
+    "sharesCount": 0,
+    "commentsCount": 11,
+    "topComments": [
+      {
+        "commentId": "c6",
+        "text": "Stała pozycja 4h/mc, klient płaci albo nie ma researchu.",
+        "profileName": "Monika Grabowska",
+        "date": "2026-09-10T16:00:00.000Z"
+      }
+    ],
+    "attachments": [],
+    "groupTitle": "Marketing w małej firmie (fixture)",
+    "legacyId": "9008",
+    "id": "ID9008"
+  },
+  {
+    "facebookUrl": "https://www.facebook.com/groups/700800900",
+    "url": "https://www.facebook.com/groups/700800900/permalink/7104/",
+    "time": "2026-09-10T10:20:00.000Z",
+    "user": {
+      "id": "1000004",
+      "name": "Bartek"
+    },
+    "text": "Klient znowu chce \"coś z AI\" ale nie umie powiedzieć co. Jak wy prowadzicie taką rozmowę, żeby wyszedł z tego konkretny zakres, a nie kolejny chatbot na stronie?",
+    "link": null,
+    "likesCount": 5,
+    "sharesCount": 2,
+    "commentsCount": 2,
+    "topComments": [],
+    "attachments": [],
+    "groupTitle": "Agencje i freelancerzy (fixture 2)",
+    "legacyId": "7104",
+    "id": "ID9004"
+  },
+  {
+    "facebookUrl": "https://www.facebook.com/groups/700800900",
+    "url": "https://www.facebook.com/groups/700800900/permalink/7105/",
+    "time": "2026-09-10T12:00:00.000Z",
+    "user": {
+      "id": "1000005",
+      "name": "Agnieszka Wójcik"
+    },
+    "text": "Narzekanie: trzeci klient w tym miesiącu wysyła mi teksty z ChatGPT do wrzucenia na LinkedIn i wszystkie brzmią tak samo. Jak im to powiedzieć, żeby się nie obrazili?",
+    "link": null,
+    "likesCount": 5,
+    "sharesCount": 1,
+    "commentsCount": 2,
+    "topComments": [],
+    "attachments": [],
+    "groupTitle": "Agencje i freelancerzy (fixture 2)",
+    "legacyId": "7105",
+    "id": "ID9005"
+  },
+  {
+    "facebookUrl": "https://www.facebook.com/groups/700800900",
+    "url": "https://www.facebook.com/groups/700800900/permalink/7106/",
+    "time": "2026-09-10T16:40:00.000Z",
+    "user": {
+      "id": "1000099",
+      "name": "Iwona Dąbrowska"
+    },
+    "text": "Pokazuję, co sobie zrobiłam: arkusz, który sam liczy marżę z kampanii i co tydzień wysyła mi mail z podsumowaniem. Robiłam z @Karol Wielgus, chętnie opowiem jak.",
+    "link": null,
+    "likesCount": 24,
+    "sharesCount": 3,
+    "commentsCount": 8,
+    "topComments": [
+      {
+        "commentId": "c9",
+        "text": "Ładne, @Iwona Dąbrowska wrzuć szablon.",
+        "profileName": "Rafał Sikora",
+        "date": "2026-09-10T17:00:00.000Z"
+      }
+    ],
+    "attachments": [],
+    "groupTitle": "Agencje i freelancerzy (fixture 2)"
+  }
+]

@@ -16,6 +16,9 @@ Grupy: 1. Nowych postów: 7 (pominięto 1 już zaraportowany). Koszt: 0,03 USD, 
 ## Na co narzekają
 1. **Klienci przysyłają teksty z ChatGPT, które brzmią tak samo** (1 osoba, 33 polubienia, 21 komentarzy). Najlepsza odpowiedź: pokazać im przycisk "Seems like AI slop" na LinkedIn. Co z tym zrobić: post o tym, jak powiedzieć klientowi, że tekst brzmi jak AI, bez obrażania.
 
+## Co pokazują
+Nikt nic nie pokazywał w tym sprawdzeniu.
+
 ## Co wraca
 - pierwszy raport, porównanie od następnego
 
