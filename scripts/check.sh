@@ -32,8 +32,9 @@ else
 fi
 
 echo "== pliki prywatne =="
-if find . -path ./.git -prune -o \( -name 'groups.json' -o -name 'brand-context*' -o -name '*.csv' \) -print | grep -q .; then
-  find . -path ./.git -prune -o \( -name 'groups.json' -o -name 'brand-context*' -o -name '*.csv' \) -print
+# CSV poza tests/ = prawdopodobnie prawdziwy eksport. Fixtures w tests/ są syntetyczne i dozwolone.
+if find . -path ./.git -prune -o -path ./tests -prune -o \( -name 'groups.json' -o -name 'brand-context*' -o -name '*.csv' -o -name 'watchlist*.json' \) -print | grep -q .; then
+  find . -path ./.git -prune -o -path ./tests -prune -o \( -name 'groups.json' -o -name 'brand-context*' -o -name '*.csv' -o -name 'watchlist*.json' \) -print
   echo "FAIL plik prywatny w drzewie"; fail=1
 else
   echo "ok brak plików prywatnych"
