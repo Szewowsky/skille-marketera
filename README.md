@@ -25,7 +25,6 @@ Alternatywa dla jednego skilla bez agenta: `npx skills add Szewowsky/skille-mark
 | `poranny-radar` | Poranny brief z eksportu mailingowego i klocków (sprzedaż, skrzynka): trzy rzeczy na dziś, co traci, co zaskoczyło, wnioski z licznikiem obserwacji, które kolejny brief cytuje z powrotem. Liczby liczy skrypt. | gotowy |
 | `grupy-fb` | Czyta nowe posty z wybranych grup Facebook, odsiewa według tematu użytkownika, pisze raport "o co pytają, na co narzekają, co wraca" z pomysłami i pilnuje wzmianek o marce. Autorzy tylko z imienia, bez linków do profili, anonimizacja w skrypcie zanim agent cokolwiek zobaczy. | gotowy |
 | `konfigurator` | Jedno wejście do reszty: sprawdza, co jest zainstalowane i skonfigurowane, czy są klucze (Firecrawl, Apify), pokazuje tabelę gotowości i prowadzi przez konfigurację wybranego skilla, krok po kroku, jego własną instrukcją. | gotowy |
-| `audyt-strony` | Wrapper na audyt strony (Impeccable) z instrukcją. | planowany |
 | `straznik-wysylki` | Checklista przed wysyłką newslettera, z dowodami. | planowany |
 
 ## Jak skonfigurować pod siebie
