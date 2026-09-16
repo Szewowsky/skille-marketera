@@ -7,10 +7,10 @@ wróciło puste; działa wyłącznie zestaw pól z funkcji `wejscie_aktora`.
 
 Użycie:
 
-    APIFY_API_TOKEN=$(security find-generic-password -a APIFY_API_TOKEN -s content-rob -w) \\
+    APIFY_API_TOKEN=$(security find-generic-password -a APIFY_API_TOKEN -s <usługa> -w) \\
       python3 .claude/skills/czujka/scripts/reklamy.py \\
-      --page-id 109529281430293 \\
-      --wyjscie czujka/snapshoty/_surowe/brave-education-reklamy.json
+      --page-id <id strony> \\
+      --wyjscie czujka/snapshoty/_surowe/<etykieta>-reklamy.json
 
 Argumenty:
     --page-id   identyfikator strony na Facebooku (`view_all_page_id`), wymagany
