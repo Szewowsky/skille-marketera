@@ -11,10 +11,11 @@ Gdy CLI nie ma: `npx -y firecrawl-cli@latest <komenda>` działa bez instalacji. 
 ## Strona: pobranie stanu
 
 ```bash
-firecrawl scrape "<adres>" --only-main-content --wait-for 3000 -f markdown -o czujka/snapshoty/_surowe/<etykieta>.md
+firecrawl scrape "<adres>" --only-main-content --wait-for 3000 --max-age 0 -f markdown -o czujka/snapshoty/_surowe/<etykieta>.md
 ```
 
 - `--wait-for 3000`: daje skryptom czas na podmianę liczników i cen. Przy stronach z odliczaniem to jest różnica między placeholderem a prawdziwą wartością.
+- `--max-age 0` wymusza świeże pobranie; bez tej flagi Firecrawl oddaje zapamiętaną wersję z poprzedniego sprawdzenia i porównanie pokazuje zero zmian, których nie ma (sygnał ostrzegawczy: odliczanie stoi na tej samej sekundzie co poprzednio).
 - `--only-main-content`: bez nawigacji i stopki. Na stronach Webflow flaga często prawie nic nie ucina (sprawdzone: 118 KB z flagą vs 121 KB bez), więc drugie pobranie bez flagi rób tylko wtedy, gdy w pierwszym brakuje ceny albo statusu, nie profilaktycznie.
 - Wynik to markdown widocznego tekstu. Z niego wyciągasz stan (SKILL.md, Sprawdzenie krok 3) i zapisujesz jako `snapshoty/<etykieta>.md`. Surowy markdown możesz trzymać w `snapshoty/_surowe/` do podglądu, ale porównujesz stan, nie surowy tekst: diff na surowym tekście to szum.
 - Padnięcie: kod inny niż 200, pusty markdown, komunikat o blokadzie. Zapisz "nie udało się sprawdzić" i idź dalej. Jeden ponowny spróbowanie po 10 sekundach, nie więcej.
@@ -25,7 +26,7 @@ Format `changeTracking` (`-f markdown,changeTracking`) daje gotową informację,
 
 Meta Ads Library jest publiczna: pokazuje aktywne reklamy każdej strony na Facebooku i Instagramie, bez logowania. Strona jest ciężka i ładuje reklamy skryptem, więc pewniejsza droga to gotowy aktor Apify, a Firecrawl jest zapasem.
 
-**Droga główna: Apify.** Aktor `igolaizola/facebook-ad-library-scraper` (REST, token w `APIFY_API_TOKEN`, plan Free wystarcza na kilka kont dziennie). Wejście: adres Ads Library z `view_all_page_id` (niżej) albo `page_id` + kraj, limit 100 reklam. Uruchomienie tak jak w skillu `grupy-fb` (`scripts/` tam pokazuje wzór: POST run, odpytywanie statusu, pobranie datasetu). Z wyniku bierzesz: identyfikator reklamy, datę startu, platformy, treść (pierwsze zdanie), wezwanie, link docelowy. Porównuj po treści kreacji (treść + wezwanie + link), nie po samych identyfikatorach: przy limicie 100 identyfikatory rotują i dają fałszywe "nowe". Gdy wróci dokładnie tyle reklam, ile wynosi limit, lista jest ucięta: zapisz w snapshocie ostrzeżenie "lista ucięta, najstarsza z <data>", a przy porównaniu reklam sprzed tej daty nie oznaczaj jako zakończone (mogły wypaść za limit). Konto z ponad 100 aktywnymi reklamami: podnieś limit do 200 (koszt aktora rośnie proporcjonalnie, dziś około 1 grosza za 100). Brak tokena albo 401/403 = "nie udało się sprawdzić" z powodem, nie cisza.
+**Droga główna: Apify.** Aktor `igolaizola/facebook-ad-library-scraper` (REST, token w `APIFY_API_TOKEN`, plan Free wystarcza na kilka kont dziennie). Wejście: adres Ads Library z `view_all_page_id` (niżej) albo `page_id` + kraj, limit 100 reklam. Uruchomienie gotowym skryptem tego skilla `scripts/reklamy.py` (POST run, odpytywanie statusu, pobranie datasetu, grupowanie po treści kreacji): `APIFY_API_TOKEN=$(security find-generic-password -a APIFY_API_TOKEN -s content-rob -w) python3 .claude/skills/czujka/scripts/reklamy.py --page-id 109529281430293 --wyjscie czujka/snapshoty/_surowe/brave-education-reklamy.json`. Opis wejścia do aktora jest w skrypcie i nie należy go układać od nowa: pierwsze pobranie z wejściem ułożonym z pamięci wróciło puste. Z wyniku bierzesz: identyfikator reklamy, datę startu, platformy, treść (pierwsze zdanie), wezwanie, link docelowy. Porównuj po treści kreacji (treść + wezwanie + link), nie po samych identyfikatorach: przy limicie 100 identyfikatory rotują i dają fałszywe "nowe". Aktor zwraca reklamy od najnowszych (`sortBy: mostRecent`), więc gdy wróci dokładnie tyle reklam, ile wynosi `maxItems`, lista jest ucięta od dołu i poza nią zostają NAJSTARSZE reklamy: zapisz w snapshocie ostrzeżenie "lista ucięta, najstarsza widoczna z <data>", starszych reklam z poprzedniego snapshotu nie oznaczaj jako zakończone (mogły wypaść za limit), a przy następnym sprawdzeniu podnieś limit do 200 (koszt aktora rośnie mniej więcej dwukrotnie, dziś rzędu kilku groszy). Brak tokena albo 401/403 = "nie udało się sprawdzić" z powodem, nie cisza.
 
 **Zapas: Firecrawl na stronie Ads Library.** Adres wyszukiwania po nazwie:
 
@@ -42,7 +43,7 @@ https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=P
 Pobranie:
 
 ```bash
-firecrawl scrape "<adres Ads Library>" --wait-for 5000 -f markdown -o czujka/snapshoty/_surowe/<etykieta>-reklamy.md
+firecrawl scrape "<adres Ads Library>" --wait-for 5000 --max-age 0 -f markdown -o czujka/snapshoty/_surowe/<etykieta>-reklamy.md
 ```
 
 Strona ładuje reklamy skryptem, stąd dłuższe czekanie. Ze zrzutu wyciągnij listę reklam: identyfikator z biblioteki (numer przy "Identyfikator z biblioteki" albo "Library ID"), datę startu ("Rozpoczęto wyświetlanie" albo "Started running on"), platformy, pierwsze zdanie treści. Stan konta = ta lista. Porównanie: identyfikatory nowe = nowe zestawy, identyfikatory, których nie ma = zakończone. Zmiana treści przy tym samym identyfikatorze = zmiana przekazu.
