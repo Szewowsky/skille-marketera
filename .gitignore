@@ -22,3 +22,5 @@ notatki-prelegenta*
 node_modules/
 skills-lock.json
 straznik-glosu-marki-workspace/
+__pycache__/
+*.pyc

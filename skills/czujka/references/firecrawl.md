@@ -6,7 +6,7 @@ Czujka czyta stan strony tak, jak widzi go człowiek: po wykonaniu skryptów, be
 
 Klucz Firecrawl w zmiennej `FIRECRAWL_API_KEY` (plik `.env` projektu albo sejf systemowy użytkownika). Sprawdzenie: `firecrawl --status` mówi "authenticated" albo nie. Bez klucza działa tryb bez logowania (rate-limit) dla `scrape`; `monitor` wymaga klucza. Gdy klucza nie ma, powiedz to użytkownikowi jednym zdaniem i zaproponuj `firecrawl login` (otwiera przeglądarkę, użytkownik loguje się sam). Nigdy nie wpisuj klucza do plików repo ani do `config.md`.
 
-Gdy CLI nie ma: `npx -y firecrawl-cli@latest <komenda>` działa bez instalacji. Gdy w narzędziach jest MCP Firecrawl, użyj jego narzędzia scrape z tymi samymi parametrami.
+Gdy CLI nie ma: `npx -y firecrawl-cli@1.23.3 <komenda>` działa bez instalacji. Gdy w narzędziach jest MCP Firecrawl, użyj jego narzędzia scrape z tymi samymi parametrami.
 
 ## Strona: pobranie stanu
 
